@@ -3,71 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JokerCut – Fryzjer</title>
+  <title>JokerCut – Premium Barbershop</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <header>
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
     <nav class="navbar">
-      <div class="logo">Joker<span>Cut</span></div>
+      <div class="logo" data-text="JokerCut">Joker<span>Cut</span></div>
       <ul class="nav-links">
         <li><a href="#o-nas">O nas</a></li>
         <li><a href="#uslugi">Usługi</a></li>
         <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#opinie">Opinie</a></li>
+        <li><a href="#kontakt" class="nav-cta">Umów wizytę</a></li>
       </ul>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#o-nas">O nas</a></li>
+        <li><a href="#uslugi">Usługi</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#opinie">Opinie</a></li>
+        <li><a href="#kontakt">Umów wizytę</a></li>
+      </ul>
+    </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <p class="hero-tag">Lokalny Barbershop</p>
-      <h1>Styl, który<br /><span>mówi za Ciebie</span></h1>
-      <p class="hero-sub">Precyzyjne strzyżenie, klasyczne golenie, nowoczesny look – wszystko w jednym miejscu.</p>
-      <a href="#kontakt" class="btn">Umów wizytę</a>
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80"
+        alt="Barbershop interior"
+        class="hero-img"
+      />
+      <div class="hero-overlay"></div>
+      <div class="hero-scanlines"></div>
     </div>
-    <div class="hero-image">
-      <div class="hero-badge">
-        <span class="badge-num">8+</span>
-        <span class="badge-text">lat doświadczenia</span>
+
+    <div class="hero-content">
+      <p class="hero-tag reveal-up">— Premium Barbershop Warszawa</p>
+      <h1 class="hero-title reveal-up delay-1">
+        <span class="glitch" data-text="TWÓJ STYL">TWÓJ STYL</span><br />
+        <span class="neon-text">ZACZYNA SIĘ TUTAJ</span>
+      </h1>
+      <p class="hero-sub reveal-up delay-2">Precyzja. Styl. Charakter.<br />Wejdź i wyjdź inaczej.</p>
+      <div class="hero-btns reveal-up delay-3">
+        <a href="#kontakt" class="btn btn-neon">Umów wizytę</a>
+        <a href="#uslugi" class="btn btn-ghost">Zobacz usługi</a>
       </div>
+    </div>
+
+    <div class="hero-stats reveal-up delay-4">
+      <div class="hstat">
+        <span class="hstat-num">1200<span class="neon-plus">+</span></span>
+        <span class="hstat-label">Klientów</span>
+      </div>
+      <div class="hstat-divider"></div>
+      <div class="hstat">
+        <span class="hstat-num">8<span class="neon-plus">+</span></span>
+        <span class="hstat-label">Lat doświadczenia</span>
+      </div>
+      <div class="hstat-divider"></div>
+      <div class="hstat">
+        <span class="hstat-num">★ 4.9</span>
+        <span class="hstat-label">Ocena Google</span>
+      </div>
+      <div class="hstat-divider"></div>
+      <div class="hstat">
+        <span class="hstat-num">4</span>
+        <span class="hstat-label">Barbierów</span>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
   <!-- O NAS -->
   <section class="about" id="o-nas">
     <div class="container">
-      <div class="about-text">
-        <p class="section-tag">O nas</p>
-        <h2>Twój fryzjer<br />w sercu miasta</h2>
-        <p>JokerCut to miejsce, gdzie tradycyjne rzemiosło spotyka nowoczesny styl. Nasz zespół doświadczonych barberów zadba o to, abyś wychodził od nas pewny siebie i świetnie wyglądający.</p>
-        <ul class="about-list">
-          <li><span class="check">&#10003;</span> Indywidualne podejście do każdego klienta</li>
-          <li><span class="check">&#10003;</span> Najwyższej jakości produkty do pielęgnacji</li>
-          <li><span class="check">&#10003;</span> Relaksująca atmosfera i kawa gratis</li>
-        </ul>
+      <div class="about-img-wrap reveal-left">
+        <img
+          src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=80"
+          alt="Barber at work"
+          class="about-img"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=400&q=80"
+          alt="Barber tools"
+          class="about-img-sm"
+        />
+        <div class="about-badge">
+          <span>EST.</span>
+          <span class="badge-year">2016</span>
+        </div>
       </div>
-      <div class="about-stats">
-        <div class="stat-card">
-          <span class="stat-num">1200+</span>
-          <span class="stat-label">Zadowolonych klientów</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">8+</span>
-          <span class="stat-label">Lat na rynku</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">4</span>
-          <span class="stat-label">Barbierów w zespole</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-num">★ 4.9</span>
-          <span class="stat-label">Ocena klientów</span>
-        </div>
+      <div class="about-text reveal-right">
+        <p class="section-tag">// O nas</p>
+        <h2>Rzemiosło,<br /><span class="neon-text">które widać</span></h2>
+        <p class="about-desc">JokerCut to nie zwykły fryzjer. To miejsce, gdzie pasja do rzemiosła spotyka nowoczesność. Nasz zespół to ludzie, którzy strzyżenie traktują jak sztukę.</p>
+        <ul class="about-list">
+          <li><span class="list-icon">&#9654;</span> Indywidualne podejście do każdego klienta</li>
+          <li><span class="list-icon">&#9654;</span> Najwyższej jakości produkty premium</li>
+          <li><span class="list-icon">&#9654;</span> Relaksująca atmosfera i kawa w cenie</li>
+          <li><span class="list-icon">&#9654;</span> Rezerwacje online 24/7</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-neon">Poznaj nasz zespół</a>
       </div>
     </div>
   </section>
@@ -75,101 +128,169 @@
   <!-- USŁUGI -->
   <section class="services" id="uslugi">
     <div class="container">
-      <p class="section-tag center">Usługi</p>
-      <h2 class="center">Co oferujemy</h2>
+      <div class="section-header reveal-up">
+        <p class="section-tag center">// Usługi</p>
+        <h2 class="center">Co oferujemy</h2>
+        <p class="section-sub center">Każda usługa to precyzja i doświadczenie</p>
+      </div>
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">✂️</div>
+
+        <div class="service-card card-3d reveal-up delay-1" data-tilt>
+          <div class="card-glow"></div>
+          <div class="service-top">
+            <div class="service-icon">✂️</div>
+            <span class="price-tag">od 40 zł</span>
+          </div>
           <h3>Strzyżenie</h3>
-          <p>Klasyczne i nowoczesne strzyżenie dopasowane do kształtu Twojej twarzy i stylu życia.</p>
-          <span class="price">od 40 zł</span>
+          <p>Klasyczne i nowoczesne – dopasowane do Twojego kształtu twarzy i osobowości.</p>
+          <div class="card-line"></div>
+          <a href="#kontakt" class="card-link">Umów <span>→</span></a>
         </div>
-        <div class="service-card featured">
-          <div class="service-icon">🪒</div>
+
+        <div class="service-card card-3d featured reveal-up delay-2" data-tilt>
+          <div class="card-glow"></div>
+          <div class="featured-badge">POPULAR</div>
+          <div class="service-top">
+            <div class="service-icon">🪒</div>
+            <span class="price-tag">od 60 zł</span>
+          </div>
           <h3>Golenie brzytwą</h3>
-          <p>Tradycyjne golenie brzytwą z gorącymi okładami – luksus dla każdego mężczyzny.</p>
-          <span class="price">od 60 zł</span>
+          <p>Tradycja w najczystszej formie. Gorące okłady, ostra brzytwa, gładka skóra.</p>
+          <div class="card-line"></div>
+          <a href="#kontakt" class="card-link">Umów <span>→</span></a>
         </div>
-        <div class="service-card">
-          <div class="service-icon">💈</div>
+
+        <div class="service-card card-3d reveal-up delay-3" data-tilt>
+          <div class="card-glow"></div>
+          <div class="service-top">
+            <div class="service-icon">💈</div>
+            <span class="price-tag">od 90 zł</span>
+          </div>
           <h3>Strzyżenie + golenie</h3>
-          <p>Kompletny pakiet dla wymagającego mężczyzny. Wychodź z pełnym liftingiem.</p>
-          <span class="price">od 90 zł</span>
+          <p>Kompletny pakiet premium. Wyjdź z pełną metamorfozą w jednej wizycie.</p>
+          <div class="card-line"></div>
+          <a href="#kontakt" class="card-link">Umów <span>→</span></a>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🧔</div>
+
+        <div class="service-card card-3d reveal-up delay-1" data-tilt>
+          <div class="card-glow"></div>
+          <div class="service-top">
+            <div class="service-icon">🧔</div>
+            <span class="price-tag">od 35 zł</span>
+          </div>
           <h3>Stylizacja brody</h3>
-          <p>Przycinanie, kształtowanie i pielęgnacja brody – dopracowana do perfekcji.</p>
-          <span class="price">od 35 zł</span>
+          <p>Kształtowanie, przycinanie i pielęgnacja – broda idealnie dopasowana do twarzy.</p>
+          <div class="card-line"></div>
+          <a href="#kontakt" class="card-link">Umów <span>→</span></a>
         </div>
-        <div class="service-card">
-          <div class="service-icon">👦</div>
+
+        <div class="service-card card-3d reveal-up delay-2" data-tilt>
+          <div class="card-glow"></div>
+          <div class="service-top">
+            <div class="service-icon">👦</div>
+            <span class="price-tag">od 30 zł</span>
+          </div>
           <h3>Strzyżenie dzieci</h3>
-          <p>Strzyżenie dla najmłodszych klientów w spokojnej i przyjaznej atmosferze.</p>
-          <span class="price">od 30 zł</span>
+          <p>Przyjazna atmosfera dla najmłodszych. Szybko, sprawnie i bez stresu.</p>
+          <div class="card-line"></div>
+          <a href="#kontakt" class="card-link">Umów <span>→</span></a>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🎨</div>
+
+        <div class="service-card card-3d reveal-up delay-3" data-tilt>
+          <div class="card-glow"></div>
+          <div class="service-top">
+            <div class="service-icon">🎨</div>
+            <span class="price-tag">od 80 zł</span>
+          </div>
           <h3>Koloryzacja</h3>
-          <p>Modne przyciemnianie, rozjaśnianie i koloryzacja włosów z użyciem premium farb.</p>
-          <span class="price">od 80 zł</span>
+          <p>Premium farby, modne odcienie – od subtelnego przyciemniania po odważną zmianę.</p>
+          <div class="card-line"></div>
+          <a href="#kontakt" class="card-link">Umów <span>→</span></a>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- GALERIA -->
   <section class="gallery" id="galeria">
-    <div class="container">
-      <p class="section-tag center">Galeria</p>
+    <div class="section-header reveal-up">
+      <p class="section-tag center">// Galeria</p>
       <h2 class="center">Nasze realizacje</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item g1"><span>Classic Fade</span></div>
-        <div class="gallery-item g2"><span>Skin Fade + Beard</span></div>
-        <div class="gallery-item g3"><span>Undercut</span></div>
-        <div class="gallery-item g4"><span>Textured Crop</span></div>
-        <div class="gallery-item g5"><span>Mid Fade</span></div>
-        <div class="gallery-item g6"><span>Pompadour</span></div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal-up delay-1">
+        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Skin Fade" loading="lazy" />
+        <div class="gallery-overlay"><span>Skin Fade</span></div>
+      </div>
+      <div class="gallery-item reveal-up delay-2">
+        <img src="https://images.unsplash.com/photo-1519019121444-77f2bae3ba35?auto=format&fit=crop&w=600&q=80" alt="Classic Cut" loading="lazy" />
+        <div class="gallery-overlay"><span>Classic Cut</span></div>
+      </div>
+      <div class="gallery-item reveal-up delay-3">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Barbershop Vibe" loading="lazy" />
+        <div class="gallery-overlay"><span>Barbershop Vibe</span></div>
+      </div>
+      <div class="gallery-item reveal-up delay-1">
+        <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=600&q=80" alt="Beard Style" loading="lazy" />
+        <div class="gallery-overlay"><span>Beard Style</span></div>
+      </div>
+      <div class="gallery-item reveal-up delay-2">
+        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Precision Cut" loading="lazy" />
+        <div class="gallery-overlay"><span>Precision Cut</span></div>
+      </div>
+      <div class="gallery-item reveal-up delay-3">
+        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80" alt="Master Tools" loading="lazy" />
+        <div class="gallery-overlay"><span>Master Tools</span></div>
       </div>
     </div>
   </section>
 
   <!-- OPINIE -->
-  <section class="reviews">
+  <section class="reviews" id="opinie">
     <div class="container">
-      <p class="section-tag center">Opinie</p>
-      <h2 class="center">Co mówią klienci</h2>
+      <div class="section-header reveal-up">
+        <p class="section-tag center">// Opinie</p>
+        <h2 class="center">Co mówią klienci</h2>
+      </div>
       <div class="reviews-grid">
-        <div class="review-card">
-          <p>"Najlepszy barbershop w mieście! Zawsze wychodzę zadowolony. Karol to prawdziwy mistrz fade'ów."</p>
-          <div class="reviewer">
-            <div class="avatar">MK</div>
+
+        <div class="review-card reveal-up delay-1">
+          <div class="review-quote">"</div>
+          <p>Najlepszy barbershop w mieście! Zawsze wychodzę zadowolony. Karol to prawdziwy mistrz fade'ów – precyzja niesamowita.</p>
+          <div class="review-footer">
+            <div class="reviewer-avatar">MK</div>
             <div>
               <strong>Mateusz K.</strong>
               <div class="stars">★★★★★</div>
             </div>
           </div>
         </div>
-        <div class="review-card">
-          <p>"Rewelacyjna atmosfera i super strzyżenie. Przychodzę tu od 3 lat i nigdy się nie zawiodłem."</p>
-          <div class="reviewer">
-            <div class="avatar">PW</div>
+
+        <div class="review-card reveal-up delay-2">
+          <div class="review-quote">"</div>
+          <p>Rewelacyjna atmosfera i super strzyżenie. Przychodzę tu od 3 lat i nigdy się nie zawiodłem. Polecam każdemu!</p>
+          <div class="review-footer">
+            <div class="reviewer-avatar">PW</div>
             <div>
               <strong>Piotr W.</strong>
               <div class="stars">★★★★★</div>
             </div>
           </div>
         </div>
-        <div class="review-card">
-          <p>"Polecam golenie brzytwą – to zupełnie inne doświadczenie niż zwykłe golenie. Absolutny relaks!"</p>
-          <div class="reviewer">
-            <div class="avatar">TS</div>
+
+        <div class="review-card reveal-up delay-3">
+          <div class="review-quote">"</div>
+          <p>Golenie brzytwą to zupełnie inne doświadczenie. Absolutny relaks, idealna gładkość. Wróciłem już po raz piąty!</p>
+          <div class="review-footer">
+            <div class="reviewer-avatar">TS</div>
             <div>
               <strong>Tomasz S.</strong>
               <div class="stars">★★★★★</div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -177,9 +298,9 @@
   <!-- KONTAKT -->
   <section class="contact" id="kontakt">
     <div class="container contact-grid">
-      <div class="contact-info">
-        <p class="section-tag">Kontakt</p>
-        <h2>Odwiedź nas<br />lub zadzwoń</h2>
+      <div class="contact-info reveal-left">
+        <p class="section-tag">// Kontakt</p>
+        <h2>Zarezerwuj<br /><span class="neon-text">swoją wizytę</span></h2>
         <div class="info-block">
           <span class="info-icon">📍</span>
           <div>
@@ -201,80 +322,186 @@
             <p>Pon–Pt: 9:00–20:00<br />Sobota: 9:00–17:00<br />Niedziela: zamknięte</p>
           </div>
         </div>
+        <div class="contact-socials">
+          <a href="#" class="social-pill">Instagram</a>
+          <a href="#" class="social-pill">Facebook</a>
+        </div>
       </div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
-        <h3>Umów wizytę</h3>
-        <div class="form-group">
-          <input type="text" placeholder="Imię i nazwisko" required />
+
+      <form class="contact-form reveal-right" onsubmit="handleSubmit(event)">
+        <h3>Formularz rezerwacji</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Imię i nazwisko</label>
+            <input type="text" placeholder="Jan Kowalski" required />
+          </div>
+          <div class="form-group">
+            <label>Telefon</label>
+            <input type="tel" placeholder="+48 500 000 000" required />
+          </div>
         </div>
         <div class="form-group">
-          <input type="tel" placeholder="Numer telefonu" required />
-        </div>
-        <div class="form-group">
+          <label>Usługa</label>
           <select>
             <option value="" disabled selected>Wybierz usługę</option>
-            <option>Strzyżenie</option>
-            <option>Golenie brzytwą</option>
-            <option>Strzyżenie + golenie</option>
-            <option>Stylizacja brody</option>
-            <option>Strzyżenie dzieci</option>
-            <option>Koloryzacja</option>
+            <option>Strzyżenie (od 40 zł)</option>
+            <option>Golenie brzytwą (od 60 zł)</option>
+            <option>Strzyżenie + golenie (od 90 zł)</option>
+            <option>Stylizacja brody (od 35 zł)</option>
+            <option>Strzyżenie dzieci (od 30 zł)</option>
+            <option>Koloryzacja (od 80 zł)</option>
           </select>
         </div>
-        <div class="form-group">
-          <input type="date" />
+        <div class="form-row">
+          <div class="form-group">
+            <label>Data</label>
+            <input type="date" />
+          </div>
+          <div class="form-group">
+            <label>Godzina</label>
+            <select>
+              <option value="" disabled selected>Wybierz godzinę</option>
+              <option>9:00</option><option>9:30</option><option>10:00</option>
+              <option>10:30</option><option>11:00</option><option>11:30</option>
+              <option>12:00</option><option>13:00</option><option>14:00</option>
+              <option>15:00</option><option>16:00</option><option>17:00</option>
+              <option>18:00</option><option>19:00</option>
+            </select>
+          </div>
         </div>
-        <button type="submit" class="btn btn-full">Wyślij zapytanie</button>
+        <button type="submit" class="btn btn-neon btn-full">
+          <span class="btn-text">Wyślij rezerwację</span>
+          <span class="btn-icon">→</span>
+        </button>
       </form>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="container footer-grid">
-      <div>
-        <div class="logo">Joker<span>Cut</span></div>
-        <p class="footer-desc">Twój lokalny barbershop. Pasja do rzemiosła, styl bez kompromisów.</p>
-      </div>
-      <div>
-        <h4>Szybkie linki</h4>
-        <ul>
-          <li><a href="#o-nas">O nas</a></li>
-          <li><a href="#uslugi">Usługi</a></li>
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Social Media</h4>
-        <div class="socials">
-          <a href="#" class="social-btn">Instagram</a>
-          <a href="#" class="social-btn">Facebook</a>
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="logo" data-text="JokerCut">Joker<span>Cut</span></div>
+          <p>Pasja do rzemiosła, styl bez kompromisów. Twój lokalny barbershop w sercu Warszawy.</p>
+        </div>
+        <div>
+          <h4>Nawigacja</h4>
+          <ul>
+            <li><a href="#o-nas">O nas</a></li>
+            <li><a href="#uslugi">Usługi</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Godziny</h4>
+          <ul class="hours-list">
+            <li><span>Pon–Pt</span><span>9:00–20:00</span></li>
+            <li><span>Sobota</span><span>9:00–17:00</span></li>
+            <li><span class="closed">Niedziela</span><span class="closed">Zamknięte</span></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Social Media</h4>
+          <div class="footer-socials">
+            <a href="#" class="social-pill">Instagram</a>
+            <a href="#" class="social-pill">Facebook</a>
+            <a href="#" class="social-pill">TikTok</a>
+          </div>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 JokerCut. Wszelkie prawa zastrzeżone.</p>
+      <div class="container">
+        <p>&copy; 2026 JokerCut. Wszelkie prawa zastrzeżone.</p>
+        <p class="footer-credit">Designed with ❤️ in Warsaw</p>
+      </div>
     </div>
   </footer>
 
   <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('button');
-      btn.textContent = '✓ Wysłano! Oddzwonimy wkrótce.';
-      btn.style.background = '#2ecc71';
-      btn.disabled = true;
-    }
+    // ── Cursor glow ──
+    const glow = document.getElementById('cursorGlow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top  = e.clientY + 'px';
+    });
 
-    // Smooth scroll for nav links
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    // ── Navbar scroll ──
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ── Mobile menu ──
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
       });
     });
-  </script>
 
+    // ── Scroll reveal (Intersection Observer) ──
+    const revealEls = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // ── 3D Tilt on service cards ──
+    document.querySelectorAll('.card-3d').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect  = card.getBoundingClientRect();
+        const cx    = rect.left + rect.width  / 2;
+        const cy    = rect.top  + rect.height / 2;
+        const dx    = (e.clientX - cx) / (rect.width  / 2);
+        const dy    = (e.clientY - cy) / (rect.height / 2);
+        card.style.transform = `perspective(800px) rotateY(${dx * 12}deg) rotateX(${-dy * 12}deg) translateZ(10px)`;
+        const glowEl = card.querySelector('.card-glow');
+        if (glowEl) {
+          glowEl.style.background = `radial-gradient(circle at ${e.clientX - rect.left}px ${e.clientY - rect.top}px, rgba(0,245,212,0.18), transparent 60%)`;
+        }
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(800px) rotateY(0deg) rotateX(0deg) translateZ(0)';
+        card.style.transition = 'transform 0.5s ease';
+      });
+      card.addEventListener('mouseenter', () => {
+        card.style.transition = 'transform 0.1s ease';
+      });
+    });
+
+    // ── Smooth scroll ──
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // ── Form submit ──
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn  = e.target.querySelector('button');
+      const text = btn.querySelector('.btn-text');
+      text.textContent = '✓ Rezerwacja wysłana!';
+      btn.style.background = 'linear-gradient(135deg, #00c896, #00a878)';
+      btn.disabled = true;
+    }
+  </script>
 </body>
 </html>
